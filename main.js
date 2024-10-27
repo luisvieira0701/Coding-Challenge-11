@@ -23,5 +23,5 @@ placeOrderButton.addEventListener('click', function() {
     const quantity = quantityInput.value;
     const totalPrice = totalPriceElement.textContent;
 
-    orderSummary.textContent = `You ordered ${quantity} of ${selectedProduct}. Total Order: ${totalPrice}`;
+    orderSummary.textContent = `You ordered ${quantity} of ${selectedProduct}. Total Order: $${totalPrice}`;
 });
