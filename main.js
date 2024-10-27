@@ -2,6 +2,7 @@ const productSelector = document.getElementById('product-selector')
 const quantityInput = document.getElementById('quantity')
 const totalPriceElement = document.getElementById('total-price')
 const orderSummary = document.getElementById('order-summary')
+const placeOrderButton = document.getElementById('place-order')
 
 //Task 3- Function to calculate and update total price based on product and quantity
 function updateTotalPrice () {
@@ -15,3 +16,12 @@ function updateTotalPrice () {
 //Task 2- Add Event Listener for Product Selection
 productSelector=addEventListener('change', updateTotalPrice)
 quantityInput=addEventListener('input', updateTotalPrice)
+
+//Task 4- Handle Order Submission
+placeOrderButton.addEventListener('click' , function() {
+    const selectedProduct = productSelector.options[productSelector.selectedIndex].text
+    const quantity = quantityInput.value
+    const totalPrice = totalPriceElement.textContent
+
+    orderSummary.textContent = `You ordered ${quantity} of ${selectedProduct}. Total Order: ${totalPrice}`
+})
