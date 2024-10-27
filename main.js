@@ -14,8 +14,8 @@ function updateTotalPrice () {
 }
 
 //Task 2- Add Event Listener for Product Selection
-productSelector=addEventListener('change', updateTotalPrice)
-quantityInput=addEventListener('input', updateTotalPrice)
+productSelector.addEventListener('change', updateTotalPrice)
+quantityInput.addEventListener('input', updateTotalPrice)
 
 //Task 4- Handle Order Submission
 placeOrderButton.addEventListener('click', function() {
